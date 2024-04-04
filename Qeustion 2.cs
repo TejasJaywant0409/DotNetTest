@@ -30,12 +30,11 @@ namespace FindSubString
             for (int right = 0; right < inputString.Length; right++)
             {
                 char currentChar = inputString[right];
-                // Check if the current character has appeared in the substring
+                // Checking if the current character has appeared in the substring
                 for (int i = left; i < right; i++)
                 {
                     if (inputString[i] == currentChar)
                     {
-                        // Move the left pointer to the right of the previous occurrence of the character
                         left = i + 1;
                         break;
                     }
